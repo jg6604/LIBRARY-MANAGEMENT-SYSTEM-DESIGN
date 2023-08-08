@@ -1,4 +1,5 @@
-# system-design
+# library-management-system-design
+# Java /JDBC /MySQL /GUI
 
 Project Introduction
 Book rental management system is building applications in java. This project focuses on how to create a book rental management system project in java. The system is divided into two roles: administrator and user(borrower). This system could be used in local bookstores. The main feature of this system is that all the books available in the bookstore can be borrowed by users and also the borrowed books by users can be returned in the bookstore.

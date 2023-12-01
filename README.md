@@ -3,14 +3,14 @@
 
 DESIGNED BY GU 
 
-##Project Introduction
+## Project Introduction
 Library management system is building applications in java. This project focuses on how to create a library management system project in java. The system is divided into two roles: administrator and user(borrower). This system could be used in local bookstores and school. The main feature of this system is that all the books available in the bookstore or school can be borrowed by users and also the borrowed books by users can be returned in the bookstore or school.
 The main features of the administrator include create and reset databases, add users, view users, issue books, view books and return books. The main features of ordinary users include viewing books and borrowing books.
 
-##Technology
+## Technology
 Java, Eclipse IDE, MySQL(open-source relational database management system), MySQL Community Server, MySQL JDBC Connector, Databases, JDBC, GUI, rs2xml.jar(used to display the data in a table format).
 
-##Key Activities
+## Key Activities
 
 <img width="627" alt="Screenshot 2023-12-01 at 12 01 20 AM" src="https://github.com/jg6604/LIBRARY-MANAGEMENT-SYSTEM-DESIGN-GU/assets/90733954/3366fa3d-6489-4eb7-89af-79f1ce25e29c">
 

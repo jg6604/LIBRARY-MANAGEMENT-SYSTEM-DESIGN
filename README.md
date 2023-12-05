@@ -8,7 +8,7 @@ Library management system is building applications in java. This project focuses
 The main features of the administrator include create and reset databases, add users, view users, issue books, view books and return books. The main features of ordinary users include viewing books and borrowing books.
 
 ## Technology
-Java, Eclipse IDE, MySQL(open-source relational database management system), MySQL Community Server, MySQL JDBC Connector, Databases, JDBC, GUI, rs2xml.jar(used to display the data in a table format). multithread programming
+Java, Eclipse IDE, MySQL(open-source relational database management system), MySQL Community Server, MySQL JDBC Connector, Databases, JDBC, GUI. multithread programming
 
 ## Key Activities
 

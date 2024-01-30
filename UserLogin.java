@@ -43,14 +43,14 @@ public class UserLogin {
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 669, 460);
+		frame.setBounds(100, 100, 700, 460);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		JLabel newLabel = new JLabel("User Login Form");
 		newLabel.setForeground(Color.GRAY);
 		newLabel.setFont(new Font("Tahoma", Font.PLAIN, 28));
 
-		JLabel enterName = new JLabel("Enter User Id :");
+		JLabel enterName = new JLabel("Enter User Name :");
 		enterName.setFont(new Font("Tahoma", Font.PLAIN, 18));
 
 		textField = new JTextField();
@@ -66,7 +66,9 @@ public class UserLogin {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String username = textField.getText();
+				
 				String password = String.valueOf(passwordField.getPassword());
+				//String UID = String.valueOf(passwordField.getPassword());
 				
 		        if(username.equals("")) //If username is null
 		        {
@@ -81,18 +83,40 @@ public class UserLogin {
 		            try
 		            {
 		            Statement stmt = connection.createStatement();
-		              stmt.executeUpdate("USE BOOKRENT"); //Use the database with the name "BOOKRENT"
-		              String st = ("SELECT * FROM USERS WHERE USERNAME='"+username+"' AND PASSWORD='"+password+"'"); 
+		              stmt.executeUpdate("USE LIBRARY"); //Use the database with the name 
+		              String st = ("SELECT * FROM USERS WHERE USERNAME='"+username+"' AND PASSWORD='"+password+"'");
+		              //UID= ("SELECT UID FROM USERS WHERE USERNAME='"+username+"' AND PASSWORD='"+password+"'");
+		              //String UID="2";
 		              ResultSet rs = stmt.executeQuery(st); //Execute query
+		              
 		              if(rs.next()==false) { //Move pointer below
 		                  
 		                  JOptionPane.showMessageDialog(null,"Wrong Username/Password!"); 
 		 
 		              }
 		              else {
-		            	  UserSuccess.main(new String[] {});
+
 		                  frame.dispose();
-		                rs.beforeFirst();  
+		                rs.beforeFirst(); 
+		                while(rs.next())
+		                {
+		                  String admin=rs.getString("ADMIN");
+		                 
+		            	  String UID=rs.getString("UID");
+		                
+		            	  if(admin.equals("1")) {
+		            		  AdminSuccess.main(new String[]{});
+		            	  }
+		            	  else {
+		    
+
+		            	      UserSuccess.main(new String[] {});
+		            	      
+		            	  }
+		                }
+		            	  
+		            	  
+ 
 		              }
 		              }
 		            catch (Exception ex) {
@@ -100,6 +124,8 @@ public class UserLogin {
 		        }
 		        }
 			}
+
+
 		});
 		
 		

@@ -22,9 +22,14 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 import net.proteanit.sql.DbUtils;
 
-public class UserSuccess {
 
-	private JFrame frame;
+public class UserSuccess{
+	public static String UID;
+	//public void UID(String UID) {
+		//this.UID=UID;
+	//}
+
+	public JFrame frame;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -38,12 +43,15 @@ public class UserSuccess {
 			}
 		});
 	}
+	
 
-	public UserSuccess() {
+	public UserSuccess(String ) {
 		initialize();
 	}
 
 	private void initialize() {
+		//String var=UserLogin().UID;
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 640, 460);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,7 +60,7 @@ public class UserSuccess {
 		userSection.setForeground(Color.GRAY);
 		userSection.setFont(new Font("Tahoma", Font.PLAIN, 28));
 
-	    JButton view_but=new JButton("View Book"); 
+	    JButton view_but=new JButton("View Books"); 
 	    view_but.setBounds(20,20,120,25);
 	    view_but.addActionListener(new ActionListener() { 
 	        public void actionPerformed(ActionEvent e){
@@ -63,7 +71,7 @@ public class UserSuccess {
 	            String sql="select * from BOOKS"; //Retrieve data from database
 	            try {
 	                Statement stmt = connection.createStatement(); //connect to database
-	                stmt.executeUpdate("USE BOOKRENT"); 
+	                stmt.executeUpdate("USE LIBRARY"); 
 	                stmt=connection.createStatement();
 	                ResultSet rs=stmt.executeQuery(sql);
 	                JTable book_list= new JTable(); //show data in table format
@@ -85,16 +93,16 @@ public class UserSuccess {
 	    );
 	    
 	    
-	    JButton my_book=new JButton("Borrow Book"); 
+	    JButton my_book=new JButton("My Books"); 
 	    my_book.setBounds(150,20,120,25);
 	    my_book.addActionListener(new ActionListener() { 
 	        public void actionPerformed(ActionEvent e){
 	             
 	               
-	            JFrame f = new JFrame("Borrow Book"); //View books issued by user
+	            JFrame f = new JFrame("My Books"); //View books issued by user
+	           
+	            int UID_int = Integer.parseInt(UID); //Pass user ID
 	            
-	            int UID_int = Integer.parseInt("2"); //Pass user ID
-	 
 	            Connection connection = Connect.getConnection(); //connect to database
 	            //retrieve data
 	            String sql="select distinct issued.*,books.bname,books.genre,books.price from issued,books " + "where ((issued.uid=" + UID_int + ") and (books.bid in (select bid from issued where issued.uid="+UID_int+")))";
@@ -102,7 +110,7 @@ public class UserSuccess {
 	            try {
 	                Statement stmt = connection.createStatement();
 	                //use database
-	                stmt.executeUpdate("USE BOOKRENT");
+	                stmt.executeUpdate("USE LIBRARY");
 	                stmt=connection.createStatement();
 	                //store in array
 	                ArrayList books_list = new ArrayList();

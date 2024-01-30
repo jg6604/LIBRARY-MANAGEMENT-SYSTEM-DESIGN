@@ -15,7 +15,7 @@ Java, Eclipse IDE, MySQL(open-source relational database management system), MyS
 USERS TABLE, BOOKS TABLE, ISSUE TABLE
 # USING SWING TO CREATE GUI
 
-## GUI
+
 # home 
 <img width="641" alt="Screenshot 2024-01-29 at 9 41 13 PM" src="https://github.com/jg6604/LIBRARY-MANAGEMENT-SYSTEM-DESIGN-GU/assets/90733954/59ea7f99-7ea2-4bd3-b363-71b65898a0a4">
 

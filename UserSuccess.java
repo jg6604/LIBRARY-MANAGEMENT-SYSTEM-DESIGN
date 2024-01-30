@@ -45,7 +45,7 @@ public class UserSuccess{
 	}
 	
 
-	public UserSuccess(String ) {
+	public UserSuccess() {
 		initialize();
 	}
 

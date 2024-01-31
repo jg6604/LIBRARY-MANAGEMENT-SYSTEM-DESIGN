@@ -79,7 +79,7 @@ public class UserLogin {
 		            JOptionPane.showMessageDialog(null,"Please enter password"); 
 		        }
 		        else { 
-		            Connection connection=Connect.getConnection();  //Connect to the database
+		           
 		            try
 		            {
 		            Statement stmt = connection.createStatement();

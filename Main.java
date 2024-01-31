@@ -59,7 +59,7 @@ public class Main {
 			}
 		});
 
-		JLabel bookSystem = new JLabel("Book Rental Management System");
+		JLabel bookSystem = new JLabel("Library Management System");
 		bookSystem.setBackground(Color.GRAY);
 		bookSystem.setFont(new Font("Tahoma", Font.PLAIN, 23));
 

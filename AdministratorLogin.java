@@ -65,9 +65,8 @@ public class AdministratorLogin {
 			public void actionPerformed(ActionEvent e) {
 				String name=textField.getText();
 				String password=String.valueOf(passwordField.getPassword());
-				if(name.equals("admin")&&password.equals("admin")){
+				if(name.equals("")&&password.equals("")){
 					AdminSuccess.main(new String[]{});
-					Connection connection=Connect.getConnection(); 
 					frame.dispose();
 				}else{
 					JOptionPane.showMessageDialog(AdministratorLogin.frame, "Sorry, Username or Password Does Not Match","Login Error", JOptionPane.ERROR_MESSAGE);

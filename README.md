@@ -91,6 +91,8 @@ USERS TABLE, BOOKS TABLE, ISSUE TABLE
 # user view his or her borrowed books
 <img width="799" alt="sophie-borrowed-book-list" src="https://github.com/jg6604/LIBRARY-MANAGEMENT-SYSTEM-DESIGN-GU/assets/90733954/fbe23d2c-e7d4-444a-89ec-e3fe5104de04">
 
+
+
 <img width="799" alt="lily-borrowed-book-list" src="https://github.com/jg6604/LIBRARY-MANAGEMENT-SYSTEM-DESIGN-GU/assets/90733954/418502d3-6652-4287-a072-254208b4cf60">
 
 
